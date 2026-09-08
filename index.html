@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人成果作品集 | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- 引入 Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 導覽列 -->
+  <header class="navbar">
+    <div class="logo">Alex Chen.</div>
+    <nav>
+      <ul>
+        <li><a href="#about">關於我</a></li>
+        <li><a href="#skills">專業技能</a></li>
+        <li><a href="#projects">專題作品</a></li>
+        <li><a href="#contact">聯絡方式</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero 英雄區塊 -->
+  <section id="about" class="hero">
+    <div class="hero-content">
+      <h1>嗨，我是 <span class="highlight">Alex Chen</span></h1>
+      <p class="subtitle">資訊工程學系 | 大學四年成果展示與專題集錦</p>
+      <p class="bio">熱衷於 Web 開發與 AI 應用，喜歡將想法轉化為實際的作品。這是我的個人 IP 網站，記錄了我大學四年的成長與專題開發歷程。</p>
+      <a href="#projects" class="btn">查看作品</a>
+    </div>
+  </section>
+
+  <!-- 專業技能標籤區 -->
+  <section id="skills" class="skills-section">
+    <h2>專業技能</h2>
+    <div class="skills-container">
+      <span class="skill-tag">HTML5 / CSS3</span>
+      <span class="skill-tag">JavaScript (ES6+)</span>
+      <span class="skill-tag">Python / PyTorch</span>
+      <span class="skill-tag">React.js</span>
+      <span class="skill-tag">Git / GitHub</span>
+      <span class="skill-tag">Node.js</span>
+    </div>
+  </section>
+
+  <!-- 作品展示區塊 -->
+  <section id="projects" class="projects-section">
+    <h2>大學專題與成果展示</h2>
+    <div class="projects-grid">
+      
+      <!-- 作品 1 -->
+      <div class="project-card" onclick="openModal('project1')">
+        <div class="card-img" style="background-image: url('https://picsum.photos/400/250?random=1');"></div>
+        <div class="card-content">
+          <span class="category">畢業專題</span>
+          <h3>智慧影像辨識與分析系統</h3>
+          <p>結合深度學習與 Web 介面，實時進行影像物體偵測與數據視覺化分析。</p>
+        </div>
+      </div>
+
+      <!-- 作品 2 -->
+      <div class="project-card" onclick="openModal('project2')">
+        <div class="card-img" style="background-image: url('https://picsum.photos/400/250?random=2');"></div>
+        <div class="card-content">
+          <span class="category">Web 開發</span>
+          <h3>全端電商平台網站</h3>
+          <p>採用 Node.js 與 React 開發，實作購物車、會員系統與金流串接。</p>
+        </div>
+      </div>
+
+      <!-- 作品 3 -->
+      <div class="project-card" onclick="openModal('project3')">
+        <div class="card-img" style="background-image: url('https://picsum.photos/400/250?random=3');"></div>
+        <div class="card-content">
+          <span class="category">軟體工程課程</span>
+          <h3>團隊協作與任務管理 App</h3>
+          <p>跨平台 App 專案，支援即時看板、任務指派與進度追蹤功能。</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 聯絡資訊區 -->
+  <section id="contact" class="contact-section">
+    <h2>聯絡我</h2>
+    <p>歡迎各類專案合作、技術交流或工作機會諮詢！</p>
+    <div class="contact-links">
+      <a href="mailto:your.email@example.com" class="contact-btn">Email</a>
+      <a href="https://github.com" target="_blank" class="contact-btn">GitHub</a>
+      <a href="https://linkedin.com" target="_blank" class="contact-btn">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- 詳細資料彈窗 (Modal) -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h3 id="modal-title">作品標題</h3>
+      <p id="modal-desc">作品詳細說明...</p>
+      <div id="modal-links" style="margin-top: 15px;">
+        <a href="#" id="modal-github" target="_blank" class="btn" style="padding: 6px 12px; font-size: 0.9rem;">查看 Code</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Alex Chen. Built with HTML, CSS, & JS.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
