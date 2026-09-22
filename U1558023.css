@@ -1,0 +1,76 @@
+/* 基礎樣式重置 */
+
+{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: "Microsoft JhengHei", Arial, sans-serif;
+background-color: #f4f7f6;
+color: #333;
+padding: 40px 20px;
+}
+
+header {
+text-align: center;
+margin-bottom: 40px;
+}
+
+header h1 {
+font-size: 2rem;
+color: #2c3e50;
+margin-bottom: 8px;
+}
+
+header p {
+color: #7f8c8d;
+}
+
+/* 圖片展覽容器 */
+.gallery-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 25px;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* 卡片連結通用樣式 */
+.card {
+display: block;
+width: 280px;
+background-color: #fff;
+border-radius: 12px;
+overflow: hidden;
+text-decoration: none;
+color: inherit;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
+}
+
+.card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+display: block;
+transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.caption {
+padding: 15px;
+text-align: center;
+font-weight: bold;
+color: #34495e;
+}
+
+/* ==========================================
+CSS 滑鼠懸停（Hover）動態效果
+========================================== */
+
+/* 1. 圖片放大 (Zoom) */
+.zoom-effect:hover img {
+transform: scale(1.15);
+}
