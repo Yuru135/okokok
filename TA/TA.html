@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotoStudent 大學生機車新手包</title>
+  <!-- 引入外部 CSS 檔案 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. 上方：品牌、導覽與價值主張 -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">MotoStudent</a>
+      <nav>
+        <a href="#products">精選組合</a>
+        <a href="#shipping">配送說明</a>
+        <a href="#faq">常見問題</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>大學生機車用品新手包</h1>
+    <p>預算 $5,000 內，安全帽＋防震手機架＋雨衣一次到位，安全直達宿舍。</p>
+  </section>
+
+  <main class="container">
+    <!-- 2. 主要內容：商品圖片、價格與尺寸 -->
+    <section id="products" class="products-section">
+      <h2 class="section-title">熱門新手組合</h2>
+      <div class="product-grid">
+
+        <!-- 商品 1 -->
+        <div class="product-card">
+	  <img src="全能防護通勤組.jpg" alt="全能防護通勤組" class="product-image">
+	            <div class="product-info">
+            <h3 class="product-title">全能防護通勤組（全罩安全帽＋減震手機架＋兩件式雨衣）</h3>
+            <div class="product-price">NT$ 4,980</div>
+            <div class="size-selector">
+              <label for="size1">選擇安全帽尺寸：</label>
+              <select id="size1">
+                <option value="S">S (頭圍 53-54 cm)</option>
+                <option value="M">M (頭圍 55-56 cm)</option>
+                <option value="L" selected>L (頭圍 57-58 cm)</option>
+                <option value="XL">XL (頭圍 59-60 cm)</option>
+              </select>
+            </div>
+            <button type="button" class="btn-add-cart">加入購物車</button>
+          </div>
+        </div>
+
+        <!-- 商品 2 -->
+        <div class="product-card">
+         <img src="輕巧市區通勤組.jpg" alt="全能防護通勤組" class="product-image">
+          <div class="product-info">
+            <h3 class="product-title">輕巧市區通勤組（3/4罩安全帽＋減震手機架＋防摔手套）</h3>
+            <div class="product-price">NT$ 3,680</div>
+            <div class="size-selector">
+              <label for="size2">選擇安全帽尺寸：</label>
+              <select id="size2">
+                <option value="S">S (頭圍 53-54 cm)</option>
+                <option value="M" selected>M (頭圍 55-56 cm)</option>
+                <option value="L">L (頭圍 57-58 cm)</option>
+                <option value="XL">XL (頭圍 59-60 cm)</option>
+              </select>
+            </div>
+            <button type="button" class="btn-add-cart">加入購物車</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. 輔助資訊：配送說明與常見問題 -->
+    <section id="shipping" class="aux-section">
+      <h2 class="section-title">配送說明</h2>
+      <div class="shipping-grid">
+        <div class="shipping-item">
+          <h4>📦 大學宿舍直達</h4>
+          <p class="shipping-desc">支援全台大專院校宿舍收件室直接簽收，開學前輕鬆下單。</p>
+        </div>
+        <div class="shipping-item">
+          <h4>🏪 超商取貨付款</h4>
+          <p class="shipping-desc">提供 7-11 與全家取貨付款，出貨後約 2-3 工作天到達。</p>
+        </div>
+        <div class="shipping-item">
+          <h4>🔄 7 天免費換尺寸</h4>
+          <p class="shipping-desc">安全帽尺寸不合，保持商品全新包裝即可免費提供一次來回換貨。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="aux-section">
+      <h2 class="section-title">常見問題</h2>
+      <div class="faq-item">
+        <h4>Q1：全罩安全帽如果放不下車廂怎麼辦？</h4>
+        <p>答：所有全罩組合皆免費附贈「防水厚磅防盜帽袋」，掛在車廂外扣住即可防雨防偷。</p>
+      </div>
+      <div class="faq-item">
+        <h4>Q2：手機架真的不會震壞 iPhone 鏡頭嗎？</h4>
+        <p>答：我們搭配的手機架均配備專利「減震模組」，能有效吸收引擎與高頻震動。</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 4. 頁尾：教學用途與素材來源 -->
+  <footer>
+    <p>⚠️ 本網站為網頁設計與 Ecommerce 課程專案，僅供【教學與學術練習用途】，無任何商業交易行為。</p>
+    <p>素材與參考來源：Iconography via System Emoji | 尺寸標準參考 CNS 國家安規 | 產品文案為模擬示範</p>
+    <p class="footer-copyright">© 2026 MotoStudent Demo Site. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
