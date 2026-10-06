@@ -90,7 +90,7 @@
         <p>從高磅數素T、修身牛仔褲到優雅的駝色西裝外套，奶蛙為您嚴選 10 款不挑人的膠囊穿搭單品。</p>
       </div>
       <div class="about-image">
-        <img src="06.jpg" onerror="this.src='https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80'" alt="奶蛙服飾店 形象圖">
+        <img src="images/06.jpg" onerror="this.src='https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80'" alt="奶蛙服飾店 形象圖">
       </div>
     </div>
   </section>
@@ -163,12 +163,13 @@
   </div>
 
   <script>
-    // 10 個產品數據
+    // 10 個產品數據（已更新圖片路徑至 images/ 資料夾）
     const products = [
       {
         id: 1,
         code: "01",
-        image: "01.jpg",
+        image: "images/01.jpg",
+        fallback: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&q=80",
         name: "高磅數挺版純棉 Basic T-Shirt",
         color: "素 T / 白",
         category: "top",
@@ -179,7 +180,8 @@
       {
         id: 2,
         code: "02",
-        image: "02.jpg",
+        image: "images/02.jpg",
+        fallback: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&q=80",
         name: "修身顯瘦高腰直筒牛仔褲",
         color: "中藍色洗色",
         category: "bottom",
@@ -190,7 +192,8 @@
       {
         id: 3,
         code: "03",
-        image: "03.jpg",
+        image: "images/03.jpg",
+        fallback: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80",
         name: "垂墜感寬鬆西裝褲",
         color: "米色",
         category: "bottom",
@@ -201,7 +204,8 @@
       {
         id: 4,
         code: "04",
-        image: "04.jpg",
+        image: "images/04.jpg",
+        fallback: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800&q=80",
         name: "經典寬鬆版型襯衫",
         color: "天藍色",
         category: "top",
@@ -212,7 +216,8 @@
       {
         id: 5,
         code: "05",
-        image: "05.jpg",
+        image: "images/05.jpg",
+        fallback: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80",
         name: "軟綿針織衫",
         color: "奶油白",
         category: "outer",
@@ -223,7 +228,8 @@
       {
         id: 6,
         code: "06",
-        image: "06.jpg",
+        image: "images/06.jpg",
+        fallback: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80",
         name: "微正式休閒西裝外套",
         color: "駝色 / Blazer",
         category: "outer",
@@ -234,7 +240,8 @@
       {
         id: 7,
         code: "07",
-        image: "07.jpg",
+        image: "images/07.jpg",
+        fallback: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80",
         name: "一件式收腰連身裙",
         color: "深藍色",
         category: "bottom",
@@ -245,7 +252,8 @@
       {
         id: 8,
         code: "08",
-        image: "08.jpg",
+        image: "images/08.jpg",
+        fallback: "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=800&q=80",
         name: "百搭皮革腰帶",
         color: "黑 / 金屬扣飾",
         category: "acc",
@@ -256,7 +264,8 @@
       {
         id: 9,
         code: "09",
-        image: "09.jpg",
+        image: "images/09.jpg",
+        fallback: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80",
         name: "美式復古老帽 / 棒球帽",
         color: "森林綠",
         category: "acc",
@@ -267,7 +276,8 @@
       {
         id: 10,
         code: "10",
-        image: "10.jpg",
+        image: "images/10.jpg",
+        fallback: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&q=80",
         name: "大容量質感帆布包",
         color: "天然原色 / 皮革提把",
         category: "acc",
