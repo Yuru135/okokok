@@ -3,114 +3,483 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>個人成果作品集 | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- 引入 Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>奶蛙服飾店 | Milk Frog Clothing Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- 導覽列 -->
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <p>🐸 奶蛙服飾店 新開幕優惠！全館滿 $1,500 免運費 ｜ 註冊會員即享 9 折優惠 ☕</p>
+  </div>
+
+  <!-- Header Navigation -->
   <header class="navbar">
-    <div class="logo">Alex Chen.</div>
-    <nav>
-      <ul>
-        <li><a href="#about">關於我</a></li>
-        <li><a href="#skills">專業技能</a></li>
-        <li><a href="#projects">專題作品</a></li>
-        <li><a href="#contact">聯絡方式</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-icon">🐸</span>
+        <div class="logo-text">
+          <span class="brand-name">奶蛙服飾店</span>
+          <span class="brand-sub">MILK FROG BOUTIQUE</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#hero" class="active">首頁</a>
+        <a href="#products">全部商品</a>
+        <a href="#about">關於奶蛙</a>
+        <a href="#contact">門市資訊</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="搜尋溫柔感單品..." onkeyup="filterProducts()">
+          <span class="search-icon">🔍</span>
+        </div>
+        <button class="cart-btn" onclick="toggleCart()">
+          <span class="cart-icon">🛍️</span>
+          <span class="cart-text">購物車</span>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <!-- Hero 英雄區塊 -->
-  <section id="about" class="hero">
+  <!-- Hero Banner -->
+  <section id="hero" class="hero-section">
     <div class="hero-content">
-      <h1>嗨，我是 <span class="highlight">Alex Chen</span></h1>
-      <p class="subtitle">資訊工程學系 | 大學四年成果展示與專題集錦</p>
-      <p class="bio">熱衷於 Web 開發與 AI 應用，喜歡將想法轉化為實際的作品。這是我的個人 IP 網站，記錄了我大學四年的成長與專題開發歷程。</p>
-      <a href="#projects" class="btn">查看作品</a>
+      <span class="hero-subtitle">NEW ARRIVALS / 2026 AUTUMN</span>
+      <h1>溫柔奶茶色系 · 質感日常穿搭</h1>
+      <p>精選 10 款四季皆宜的日常質感單品，讓每位女孩都能穿出親和與自信美。</p>
+      <a href="#products" class="btn-primary">探索熱銷單品</a>
     </div>
   </section>
 
-  <!-- 專業技能標籤區 -->
-  <section id="skills" class="skills-section">
-    <h2>專業技能</h2>
-    <div class="skills-container">
-      <span class="skill-tag">HTML5 / CSS3</span>
-      <span class="skill-tag">JavaScript (ES6+)</span>
-      <span class="skill-tag">Python / PyTorch</span>
-      <span class="skill-tag">React.js</span>
-      <span class="skill-tag">Git / GitHub</span>
-      <span class="skill-tag">Node.js</span>
+  <!-- Main Product Section -->
+  <main id="products" class="main-container">
+    <div class="section-title">
+      <h2>奶蛙精選單品</h2>
+      <p>SELECTED COLLECTION</p>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="category-filter">
+      <button class="filter-btn active" onclick="filterCategory('all')">全部商品 (10)</button>
+      <button class="filter-btn" onclick="filterCategory('top')">上衣 / 襯衫</button>
+      <button class="filter-btn" onclick="filterCategory('bottom')">褲裝 / 裙裝</button>
+      <button class="filter-btn" onclick="filterCategory('outer')">外套 / 針織</button>
+      <button class="filter-btn" onclick="filterCategory('acc')">質感配件</button>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid" id="productGrid">
+      <!-- 產品會由 JavaScript 自動生成 -->
+    </div>
+  </main>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-text">
+        <span class="sub-heading">ABOUT MILK FROG</span>
+        <h2>關於奶蛙服飾店</h2>
+        <p>「奶蛙」象徵著如同奶茶般溫柔親膚的觸感，以及自在優雅的生活態度。我們相信，好的衣著不需要繁複的裝飾，挺括的版型與親膚的質料就能展現獨一無二的個人氣質。</p>
+        <p>從高磅數素T、修身牛仔褲到優雅的駝色西裝外套，奶蛙為您嚴選 10 款不挑人的膠囊穿搭單品。</p>
+      </div>
+      <div class="about-image">
+        <img src="06.jpg" onerror="this.src='https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80'" alt="奶蛙服飾店 形象圖">
+      </div>
     </div>
   </section>
 
-  <!-- 作品展示區塊 -->
-  <section id="projects" class="projects-section">
-    <h2>大學專題與成果展示</h2>
-    <div class="projects-grid">
-      
-      <!-- 作品 1 -->
-      <div class="project-card" onclick="openModal('project1')">
-        <div class="card-img" style="background-image: url('https://picsum.photos/400/250?random=1');"></div>
-        <div class="card-content">
-          <span class="category">畢業專題</span>
-          <h3>智慧影像辨識與分析系統</h3>
-          <p>結合深度學習與 Web 介面，實時進行影像物體偵測與數據視覺化分析。</p>
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>奶蛙服飾店 MILK FROG</h3>
+        <p>溫柔日常穿搭提案 / 質感膠囊衣櫥</p>
+        <p>營業時間：週一至週日 13:00 - 21:00</p>
+      </div>
+      <div class="footer-col">
+        <h4>快速連結</h4>
+        <ul>
+          <li><a href="#hero">首頁</a></li>
+          <li><a href="#products">精選單品</a></li>
+          <li><a href="#about">品牌故事</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>顧客服務</h4>
+        <ul>
+          <li><a href="#">購物須知 & 運送說明</a></li>
+          <li><a href="#">退換貨政策</a></li>
+          <li><a href="#">尺寸測量指南</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>關注奶蛙</h4>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">LINE 官方帳號</a>
+          <a href="#">Facebook</a>
         </div>
       </div>
-
-      <!-- 作品 2 -->
-      <div class="project-card" onclick="openModal('project2')">
-        <div class="card-img" style="background-image: url('https://picsum.photos/400/250?random=2');"></div>
-        <div class="card-content">
-          <span class="category">Web 開發</span>
-          <h3>全端電商平台網站</h3>
-          <p>採用 Node.js 與 React 開發，實作購物車、會員系統與金流串接。</p>
-        </div>
-      </div>
-
-      <!-- 作品 3 -->
-      <div class="project-card" onclick="openModal('project3')">
-        <div class="card-img" style="background-image: url('https://picsum.photos/400/250?random=3');"></div>
-        <div class="card-content">
-          <span class="category">軟體工程課程</span>
-          <h3>團隊協作與任務管理 App</h3>
-          <p>跨平台 App 專案，支援即時看板、任務指派與進度追蹤功能。</p>
-        </div>
-      </div>
-
     </div>
-  </section>
-
-  <!-- 聯絡資訊區 -->
-  <section id="contact" class="contact-section">
-    <h2>聯絡我</h2>
-    <p>歡迎各類專案合作、技術交流或工作機會諮詢！</p>
-    <div class="contact-links">
-      <a href="mailto:your.email@example.com" class="contact-btn">Email</a>
-      <a href="https://github.com" target="_blank" class="contact-btn">GitHub</a>
-      <a href="https://linkedin.com" target="_blank" class="contact-btn">LinkedIn</a>
+    <div class="footer-bottom">
+      <p>&copy; 2026 奶蛙服飾店 Milk Frog Clothing Store. All rights reserved.</p>
     </div>
-  </section>
+  </footer>
 
-  <!-- 詳細資料彈窗 (Modal) -->
-  <div id="modal" class="modal">
+  <!-- Slide Cart Drawer -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>您的購物車 🛍️</h3>
+      <button class="close-btn" onclick="toggleCart()">&times;</button>
+    </div>
+    <div class="cart-body" id="cartItems">
+      <p class="empty-cart-msg">購物車目前是空的喔，快去選購喜歡的商品吧！</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>小計：</span>
+        <span id="cartTotalPrice" class="total-price">NT$ 0</span>
+      </div>
+      <button class="btn-checkout" onclick="checkout()">前往結帳</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+  <!-- Product Modal -->
+  <div class="modal" id="productModal">
     <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <h3 id="modal-title">作品標題</h3>
-      <p id="modal-desc">作品詳細說明...</p>
-      <div id="modal-links" style="margin-top: 15px;">
-        <a href="#" id="modal-github" target="_blank" class="btn" style="padding: 6px 12px; font-size: 0.9rem;">查看 Code</a>
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-body" id="modalBody">
+        <!-- 彈窗內容由 JavaScript 動態生成 -->
       </div>
     </div>
   </div>
 
-  <footer>
-    <p>&copy; 2026 Alex Chen. Built with HTML, CSS, & JS.</p>
-  </footer>
+  <script>
+    // 10 個產品數據
+    const products = [
+      {
+        id: 1,
+        code: "01",
+        image: "01.jpg",
+        name: "高磅數挺版純棉 Basic T-Shirt",
+        color: "素 T / 白",
+        category: "top",
+        categoryName: "上衣 / 襯衫",
+        price: 590,
+        desc: "採用 100% 精梳棉，高磅數布料挺括不透，呈現極簡的圓領剪裁。"
+      },
+      {
+        id: 2,
+        code: "02",
+        image: "02.jpg",
+        name: "修身顯瘦高腰直筒牛仔褲",
+        color: "中藍色洗色",
+        category: "bottom",
+        categoryName: "褲裝 / 裙裝",
+        price: 1280,
+        desc: "經典的高腰設計，搭配筆直的直筒剪裁，完美修飾腿型，是四季皆宜的必備單品。"
+      },
+      {
+        id: 3,
+        code: "03",
+        image: "03.jpg",
+        name: "垂墜感寬鬆西裝褲",
+        color: "米色",
+        category: "bottom",
+        categoryName: "褲裝 / 裙裝",
+        price: 1180,
+        desc: "嚴選不易皺的西裝布料，具有極佳的垂墜感，搭配腰部打褶設計，兼具正式與休閒感。"
+      },
+      {
+        id: 4,
+        code: "04",
+        image: "04.jpg",
+        name: "經典寬鬆版型襯衫",
+        color: "天藍色",
+        category: "top",
+        categoryName: "上衣 / 襯衫",
+        price: 980,
+        desc: "標準的 Oversized 剪裁，選用透氣的純棉面料，不論單穿或作為外搭層次都非常合適。"
+      },
+      {
+        id: 5,
+        code: "05",
+        image: "05.jpg",
+        name: "軟綿針織衫",
+        color: "奶油白",
+        category: "outer",
+        categoryName: "外套 / 針織",
+        price: 1080,
+        desc: "觸感極致柔軟的針織面料，經典的圓領與微寬鬆版型，營造溫柔慵懶的冬日氛圍。"
+      },
+      {
+        id: 6,
+        code: "06",
+        image: "06.jpg",
+        name: "微正式休閒西裝外套",
+        color: "駝色 / Blazer",
+        category: "outer",
+        categoryName: "外套 / 針織",
+        price: 1880,
+        desc: "採用結構性的剪裁與質感的雙扣設計，可輕鬆切換正式會議與週末休閒造型。"
+      },
+      {
+        id: 7,
+        code: "07",
+        image: "07.jpg",
+        name: "一件式收腰連身裙",
+        color: "深藍色",
+        category: "bottom",
+        categoryName: "褲裝 / 裙裝",
+        price: 1480,
+        desc: "附有可調節收腰綁帶的 A 字連身裙，剪裁優雅顯瘦，適合各種場合的快速穿搭。"
+      },
+      {
+        id: 8,
+        code: "08",
+        image: "08.jpg",
+        name: "百搭皮革腰帶",
+        color: "黑 / 金屬扣飾",
+        category: "acc",
+        categoryName: "質感配件",
+        price: 490,
+        desc: "選用優質皮革，搭配極簡的圓形金屬扣裝飾，能瞬間提升穿搭的精緻度。"
+      },
+      {
+        id: 9,
+        code: "09",
+        image: "09.jpg",
+        name: "美式復古老帽 / 棒球帽",
+        color: "森林綠",
+        category: "acc",
+        categoryName: "質感配件",
+        price: 590,
+        desc: "水洗棉質布料，正面印有精緻的復古電繡標誌，打造隨性的街頭復古風格。"
+      },
+      {
+        id: 10,
+        code: "10",
+        image: "10.jpg",
+        name: "大容量質感帆布包",
+        color: "天然原色 / 皮革提把",
+        category: "acc",
+        categoryName: "質感配件",
+        price: 790,
+        desc: "大容量設計，選用耐磨帆布搭配皮革提把與 Logo 壓紋，兼具實用性與品牌質感。"
+      }
+    ];
 
-  <script src="script.js"></script>
+    let cart = [];
+    let currentCategory = 'all';
+
+    // 初始化渲染
+    document.addEventListener('DOMContentLoaded', () => {
+      renderProducts(products);
+    });
+
+    // 渲染商品列表
+    function renderProducts(items) {
+      const grid = document.getElementById('productGrid');
+      grid.innerHTML = '';
+
+      if (items.length === 0) {
+        grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 40px; color: #888;">沒有找到相關商品，嘗試搜尋其他關鍵字吧！</p>';
+        return;
+      }
+
+      items.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <div class="product-img-wrapper" onclick="openModal(${p.id})">
+            <span class="product-tag">${p.categoryName}</span>
+            <img src="${p.image}" onerror="this.onerror=null; this.src='${p.fallback}';" alt="${p.name}">
+          </div>
+          <div class="product-info">
+            <span class="product-color">${p.color}</span>
+            <h3 class="product-title" onclick="openModal(${p.id})">${p.name}</h3>
+            <p class="product-desc">${p.desc}</p>
+            <div class="product-bottom">
+              <span class="product-price">NT$ ${p.price.toLocaleString()}</span>
+              <button class="add-cart-btn" onclick="addToCart(${p.id})">加入購物車</button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // 分類篩選
+    function filterCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      applyFilters();
+    }
+
+    // 搜尋與篩選邏輯
+    function filterProducts() {
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      let filtered = products;
+
+      if (currentCategory !== 'all') {
+        filtered = filtered.filter(p => p.category === currentCategory);
+      }
+
+      if (query !== '') {
+        filtered = filtered.filter(p => 
+          p.name.toLowerCase().includes(query) || 
+          p.color.toLowerCase().includes(query) || 
+          p.desc.toLowerCase().includes(query)
+        );
+      }
+
+      renderProducts(filtered);
+    }
+
+    // 購物車功能
+    function addToCart(productId) {
+      const product = products.find(p => p.id === productId);
+      const existing = cart.find(item => item.id === productId);
+
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...product, qty: 1 });
+      }
+
+      updateCart();
+      toggleCart(true); // 打開購物車
+    }
+
+    function updateCart() {
+      const cartCount = document.getElementById('cartCount');
+      const cartItems = document.getElementById('cartItems');
+      const cartTotalPrice = document.getElementById('cartTotalPrice');
+
+      const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+      const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      cartCount.textContent = totalQty;
+      cartTotalPrice.textContent = `NT$ ${totalPrice.toLocaleString()}`;
+
+      if (cart.length === 0) {
+        cartItems.innerHTML = '<p class="empty-cart-msg">購物車目前是空的喔，快去選購喜歡的商品吧！</p>';
+        return;
+      }
+
+      cartItems.innerHTML = '';
+      cart.forEach(item => {
+        const cartItem = document.createElement('div');
+        cartItem.className = 'cart-item';
+        cartItem.innerHTML = `
+          <img src="${item.image}" onerror="this.onerror=null; this.src='${item.fallback}';" alt="${item.name}">
+          <div class="cart-item-details">
+            <div class="cart-item-title">${item.name}</div>
+            <div class="cart-item-color">${item.color}</div>
+            <div class="cart-item-price">NT$ ${item.price.toLocaleString()}</div>
+            <div class="cart-qty-control">
+              <button onclick="changeQty(${item.id}, -1)">-</button>
+              <span>${item.qty}</span>
+              <button onclick="changeQty(${item.id}, 1)">+</button>
+            </div>
+          </div>
+          <button class="remove-btn" onclick="removeFromCart(${item.id})">&times;</button>
+        `;
+        cartItems.appendChild(cartItem);
+      });
+    }
+
+    function changeQty(id, delta) {
+      const item = cart.find(i => i.id === id);
+      if (!item) return;
+
+      item.qty += delta;
+      if (item.qty <= 0) {
+        removeFromCart(id);
+      } else {
+        updateCart();
+      }
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(i => i.id !== id);
+      updateCart();
+    }
+
+    function toggleCart(forceOpen = false) {
+      const drawer = document.getElementById('cartDrawer');
+      const overlay = document.getElementById('cartOverlay');
+
+      if (forceOpen) {
+        drawer.classList.add('open');
+        overlay.classList.add('open');
+      } else {
+        drawer.classList.toggle('open');
+        overlay.classList.toggle('open');
+      }
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert('購物車還是空的喔！');
+        return;
+      }
+      alert('感謝您在【奶蛙服飾店】購物！這是一個範例網頁，結帳功能已觸發。');
+      cart = [];
+      updateCart();
+      toggleCart();
+    }
+
+    // Modal 彈窗
+    function openModal(productId) {
+      const p = products.find(item => item.id === productId);
+      const modal = document.getElementById('productModal');
+      const body = document.getElementById('modalBody');
+
+      body.innerHTML = `
+        <div class="modal-img">
+          <img src="${p.image}" onerror="this.onerror=null; this.src='${p.fallback}';" alt="${p.name}">
+        </div>
+        <div class="modal-info">
+          <span class="product-tag">${p.categoryName}</span>
+          <h2>${p.name}</h2>
+          <p class="modal-color">顏色/規格：${p.color}</p>
+          <div class="modal-price">NT$ ${p.price.toLocaleString()}</div>
+          <p class="modal-desc">${p.desc}</p>
+          
+          <div class="size-selector">
+            <label>選擇尺寸：</label>
+            <div class="size-options">
+              <button class="size-btn">S</button>
+              <button class="size-btn active">M</button>
+              <button class="size-btn">L</button>
+            </div>
+          </div>
+
+          <button class="btn-primary" style="width: 100%; margin-top: 20px;" onclick="addToCart(${p.id}); closeModal();">加入購物車</button>
+        </div>
+      `;
+
+      modal.classList.add('open');
+    }
+
+    function closeModal() {
+      document.getElementById('productModal').classList.remove('open');
+    }
+  </script>
 </body>
 </html>
